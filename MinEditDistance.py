@@ -82,11 +82,11 @@ def min_edit_distance(word1, word2, Levenshtein=False):
                         }
         }
     '''
-    for i in range(1, m+1): #might be m+1 etc
+    for i in range(1, m+1): 
         for j in range(1, n+1):
             #Do all checks in here
             possible_values = np.zeros(3)
-            possible_values[0] = value_table[j, i-1] + 1 #check if backwards
+            possible_values[0] = value_table[j, i-1] + 1 
             possible_values[1] = value_table[j-1, i] + 1
             
             possible_values[2] = value_table[j-1, i-1]
